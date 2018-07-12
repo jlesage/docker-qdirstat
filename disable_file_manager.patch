@@ -1,0 +1,18 @@
+--- a/src/StdCleanup.cpp
++++ b/src/StdCleanup.cpp
+@@ -47,9 +47,15 @@ Cleanup * StdCleanup::openFileManagerHere( QObject * parent )
+ 				    QObject::tr( "Open &File Manager Here" ),
+ 				    parent );
+     CHECK_NEW( cleanup );
++#ifdef ENABLE_FILE_MANAGER
+     cleanup->setWorksForDir	( true );
+     cleanup->setWorksForFile	( true );
+     cleanup->setWorksForDotEntry( true );
++#else
++    cleanup->setWorksForDir	( false );
++    cleanup->setWorksForFile	( false );
++    cleanup->setWorksForDotEntry( false );
++#endif
+     cleanup->setRefreshPolicy( Cleanup::NoRefresh );
+     cleanup->setIcon( ":/icons/file-manager.png" );
+     cleanup->setShortcut( Qt::CTRL + Qt::Key_F );

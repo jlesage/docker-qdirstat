@@ -1,0 +1,11 @@
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -79,7 +79,7 @@ bool commandLineSwitch( const QString & longName,
+ 
+ int main( int argc, char *argv[] )
+ {
+-    Logger logger( "/tmp/qdirstat-$USER", "qdirstat.log" );
++    Logger logger( "/config/log", "qdirstat.log" );
+     logVersion();
+ 
+     // Set org/app name for QSettings

@@ -1,0 +1,10 @@
+--- a/src/StdCleanup.cpp
++++ b/src/StdCleanup.cpp
+@@ -135,7 +135,6 @@
+     cleanup->setWorksForDotEntry( true	);
+     cleanup->setRefreshPolicy( Cleanup::RefreshThis );
+     cleanup->setRecurse( true );
+-    cleanup->setShell( "/bin/bash" );
+ 
+     return cleanup;
+ }
