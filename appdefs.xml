@@ -1,0 +1,61 @@
+<!--
+Definitions for QDirStat docker container.
+
+This file is used as data source to generate README.md and unRAID template files
+from Jinja2 templates.
+-->
+<defs>
+  <app>
+    <id>15</id>
+    <gui>True</gui>
+    <friendly_name>QDirStat</friendly_name>
+    <name>{{ defs.app.friendly_name|lower|replace(' ', '-') }}</name>
+    <project>
+      <description>QDirStat is a graphical application to show where your disk space has gone and to help you to clean it up.</description>
+      <url>https://github.com/shundhammer/qdirstat</url>
+    </project>
+    <unraid>
+      <support_url>https://forums.lime-technology.com/topic/72787-support-qdirstat/</support_url>
+      <category>Tools:</category>
+    </unraid>
+    <container>
+      <rough_download_size>100MB</rough_download_size>
+      <storage_permissions>ro</storage_permissions>
+    </container>
+    <!-- Extra stuff to be added to the documentation. -->
+    <documentation>
+      <section>
+        <title level="2">Cleaning Functionalities</title>
+        <content>
+In order to use the cleaning functionalities provided by {{ defs.app.friendly_name }},
+the `/storage` directory must be mapped with the read/write permissions.
+
+For example, the `docker run` command would include the following parameter:
+```
+-v $HOME:/storage:rw
+```
+        </content>
+      </section>
+    </documentation>
+    <!-- Changelog of the application. -->
+    <history>
+      <release>
+        <version>1.0.0</version>
+        <date>2018-07-12</date>
+        <change>Initial release.</change>
+      </release>
+    </history>
+  </app>
+  <container>
+    <!-- Environment variables -->
+    <environment_variables/>
+    <!-- Volumes -->
+    <volumes/>
+    <!-- Network ports -->
+    <ports/>
+    <!-- Devices -->
+    <devices/>
+    <!-- Extra parameters -->
+    <extra_params/>
+  </container>
+</defs>
