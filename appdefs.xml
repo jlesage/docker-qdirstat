@@ -15,7 +15,7 @@ from Jinja2 templates.
       <url>https://github.com/shundhammer/qdirstat</url>
     </project>
     <unraid>
-      <support_url>https://forums.lime-technology.com/topic/72787-support-qdirstat/</support_url>
+      <support_url>https://forums.unraid.net/topic/72787-support-qdirstat/</support_url>
       <category>Tools:</category>
     </unraid>
     <container>
