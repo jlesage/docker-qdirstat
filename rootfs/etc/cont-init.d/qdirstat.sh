@@ -17,6 +17,6 @@ if [ ! -f /etc/machine-id ]; then
 fi
 
 # Take ownership of the config directory content.
-chown -R $USER_ID:$GROUP_ID /config/*
+find /config -mindepth 1 -exec chown $USER_ID:$GROUP_ID {} \;
 
 # vim: set ft=sh :
