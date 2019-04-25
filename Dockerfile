@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.8-v3.5.1
+FROM jlesage/baseimage-gui:alpine-3.8-v3.5.2
 
 # Define software versions.
 ARG QDIRSTAT_VERSION=1.4
