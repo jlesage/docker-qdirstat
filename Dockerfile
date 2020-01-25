@@ -11,7 +11,7 @@ FROM jlesage/baseimage-gui:alpine-3.9-v3.5.3
 ARG DOCKER_IMAGE_VERSION=unknown
 
 # Define software versions.
-ARG QDIRSTAT_VERSION=1.4
+ARG QDIRSTAT_VERSION=1.6
 
 # Define software download URLs.
 ARG QDIRSTAT_URL=https://github.com/shundhammer/qdirstat/archive/${QDIRSTAT_VERSION}.tar.gz
@@ -40,6 +40,7 @@ RUN \
     wget https://raw.githubusercontent.com/jlesage/docker-qdirstat/master/use_default_shell.patch && \
     wget https://raw.githubusercontent.com/jlesage/docker-qdirstat/master/disable_trash.patch && \
     wget https://raw.githubusercontent.com/jlesage/docker-qdirstat/master/disable_file_manager.patch && \
+    wget https://raw.githubusercontent.com/jlesage/docker-qdirstat/master/fix_allperms.patch && \
 
     # Compile QDirStat.
     cd qdirstat-${QDIRSTAT_VERSION} && \
@@ -47,6 +48,7 @@ RUN \
     patch -p1 < ../use_default_shell.patch && \
     patch -p1 < ../disable_trash.patch && \
     patch -p1 < ../disable_file_manager.patch && \
+    patch -p1 < ../fix_allperms.patch && \
     /usr/lib/qt5/bin/qmake && \
     make -j$(nproc) && \
     cp -v src/qdirstat /usr/bin/ && \
