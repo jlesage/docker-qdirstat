@@ -40,6 +40,14 @@ For example, the `docker run` command would include the following parameter:
     <!-- Changelog of the application. -->
     <history>
       <release>
+        <version>1.1.0</version>
+        <date>2020-01-24</date>
+        <change>Upgraded QDirStat to version 1.6.</change>
+        <change>Now using baseimage v3.5.3, which brings the following changes:</change>
+        <change level="2">Updated installed packages to get latest security fixes.</change>
+        <change level="2">Make sure the tzdata is installed.</change>
+      </release>
+      <release>
         <version>1.0.2</version>
         <date>2019-04-24</date>
         <change>Now using baseimage v3.5.2, which brings the following changes:</change>
