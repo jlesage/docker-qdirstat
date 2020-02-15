@@ -11,7 +11,7 @@ FROM jlesage/baseimage-gui:alpine-3.9-v3.5.3
 ARG DOCKER_IMAGE_VERSION=unknown
 
 # Define software versions.
-ARG QDIRSTAT_VERSION=1.6
+ARG QDIRSTAT_VERSION=1.6.1
 
 # Define software download URLs.
 ARG QDIRSTAT_URL=https://github.com/shundhammer/qdirstat/archive/${QDIRSTAT_VERSION}.tar.gz
