@@ -19,4 +19,4 @@ fi
 # Take ownership of the config directory content.
 find /config -mindepth 1 -exec chown $USER_ID:$GROUP_ID {} \;
 
-# vim: set ft=sh :
+# vim:ft=sh:ts=4:sw=4:et:sts=4
