@@ -1,5 +1,5 @@
 # Docker container for QDirStat
-[![Docker Image Size](https://img.shields.io/microbadger/image-size/jlesage/qdirstat)](http://microbadger.com/#/images/jlesage/qdirstat) [![Build Status](https://drone.le-sage.com/api/badges/jlesage/docker-qdirstat/status.svg)](https://drone.le-sage.com/jlesage/docker-qdirstat) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-qdirstat.svg)](https://github.com/jlesage/docker-qdirstat/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage/0usd)
+[![Docker Image Size](https://img.shields.io/docker/image-size/jlesage/qdirstat/latest)](https://hub.docker.com/r/jlesage/qdirstat/tags) [![Build Status](https://drone.le-sage.com/api/badges/jlesage/docker-qdirstat/status.svg)](https://drone.le-sage.com/jlesage/docker-qdirstat) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-qdirstat.svg)](https://github.com/jlesage/docker-qdirstat/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage/0usd)
 
 This is a Docker container for [QDirStat](https://github.com/shundhammer/qdirstat).
 
