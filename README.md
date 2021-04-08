@@ -163,7 +163,6 @@ version: '3'
 services:
   qdirstat:
     image: jlesage/qdirstat
-    build: .
     ports:
       - "5800:5800"
     volumes:
