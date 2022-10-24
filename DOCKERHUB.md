@@ -1,15 +1,17 @@
 # Docker container for QDirStat
-[![Docker Image Size](https://img.shields.io/microbadger/image-size/jlesage/qdirstat)](http://microbadger.com/#/images/jlesage/qdirstat) [![Build Status](https://drone.le-sage.com/api/badges/jlesage/docker-qdirstat/status.svg)](https://drone.le-sage.com/jlesage/docker-qdirstat) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-qdirstat.svg)](https://github.com/jlesage/docker-qdirstat/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage/0usd)
+[![Docker Image Size](https://img.shields.io/docker/image-size/jlesage/qdirstat/latest)](https://hub.docker.com/r/jlesage/qdirstat/tags) [![Build Status](https://github.com/jlesage/docker-qdirstat/actions/workflows/build-image.yml/badge.svg?branch=master)](https://github.com/jlesage/docker-qdirstat/actions/workflows/build-image.yml) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-qdirstat.svg)](https://github.com/jlesage/docker-qdirstat/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage)
 
 This is a Docker container for [QDirStat](https://github.com/shundhammer/qdirstat).
 
-The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+The GUI of the application is accessed through a modern web browser (no
+installation or configuration needed on the client side) or via any VNC client.
 
 ---
 
-[![QDirStat logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/qdirstat-icon.png&w=200)](https://github.com/shundhammer/qdirstat)[![QDirStat](https://dummyimage.com/400x110/ffffff/575757&text=QDirStat)](https://github.com/shundhammer/qdirstat)
+[![QDirStat logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/qdirstat-icon.png&w=200)](https://github.com/shundhammer/qdirstat)[![QDirStat](https://images.placeholders.dev/?width=256&height=110&fontFamily=Georgia,sans-serif&fontWeight=400&fontSize=52&text=QDirStat&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://github.com/shundhammer/qdirstat)
 
-QDirStat is a graphical application to show where your disk space has gone and to help you to clean it up.
+QDirStat is a graphical application to show where your disk space has gone and
+to help you to clean it up.
 
 ---
 
@@ -19,7 +21,7 @@ QDirStat is a graphical application to show where your disk space has gone and t
 and parameters should be adjusted to your need.
 
 Launch the QDirStat docker container with the following command:
-```
+```shell
 docker run -d \
     --name=qdirstat \
     -p 5800:5800 \
@@ -29,8 +31,8 @@ docker run -d \
 ```
 
 Where:
-  - `/docker/appdata/qdirstat`: This is where the application stores its configuration, log and any files needing persistency.
-  - `$HOME`: This location contains files from your host that need to be accessible by the application.
+  - `/docker/appdata/qdirstat`: This is where the application stores its configuration, states, log and any files needing persistency.
+  - `$HOME`: This location contains files from your host that need to be accessible to the application.
 
 Browse to `http://your-host-ip:5800` to access the QDirStat GUI.
 Files from the host appear under the `/storage` folder in the container.
