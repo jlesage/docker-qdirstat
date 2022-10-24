@@ -1,0 +1,106 @@
+---
+
+#
+# Definitions for MediaInfo docker container.
+#
+# This file is used as data source to generate README.md and unRAID template files
+# from Jinja2 templates.
+#
+
+app:
+  id: 15
+  name: qdirstat
+  friendly_name: QDirStat
+  gui_type: x11
+  project:
+    description: |-
+      QDirStat is a graphical application to show where your disk space has gone and
+      to help you to clean it up.
+    url: https://github.com/shundhammer/qdirstat
+  unraid:
+    support_url: https://forums.unraid.net/topic/72787-support-qdirstat/
+    category: "Tools:"
+  documentation:
+    sections:
+      - title: Cleaning Functionalities
+        level: 2
+        content: |-
+          In order to use the cleaning functionalities provided by {{ app.friendly_name }},
+          the `/storage` directory must be mapped with the read/write permissions.
+
+          For example, the `docker run` command would include the following parameter:
+          ```
+          -v $HOME:/storage:rw
+          ```
+  changelog:
+    - version: 1.5.0
+      date: 2022-06-30
+      changes:
+        - 'Updated QDirStat to version 1.8.1'
+        - 'Now using baseimage version 3.5.8, based on Alpine Linux 3.14, which brings the following changes:'
+        - '2:Updated installed packages to get latest security fixes.'
+    - version: 1.4.0
+      date: 2021-08-28
+      changes:
+        - 'Updated QDirStat to version 1.8.'
+    - version: 1.3.1
+      date: 2021-04-13
+      changes:
+        - 'Now using baseimage version 3.5.7, which brings the following change:'
+        - '2:Updated installed packages to get latest security fixes.'
+    - version: 1.3.0
+      date: 2021-04-06
+      changes:
+        - 'Updated QDirStat to version 1.7.1.'
+    - version: 1.2.0
+      date: 2020-08-05
+      changes:
+        - 'Upgraded QDirStat to version 1.7.'
+        - 'Now using baseimage v3.5.6, based on Alpine 12, which brings the following changes:'
+        - '2:Upgraded glibc to version 2.31 on Alpine Linux images with glibc integrated.'
+        - '2:Updated installed packages to get latest security fixes.'
+        - '2:Adjusted the log monitor target for recent versions of YAD.'
+    - version: 1.1.1
+      date: 2020-02-15
+      changes:
+        - 'Upgraded QDirStat to version 1.6.1.'
+    - version: 1.1.0
+      date: 2020-01-24
+      changes:
+        - 'Upgraded QDirStat to version 1.6.'
+        - 'Now using baseimage v3.5.3, which brings the following changes:'
+        - '2:Updated installed packages to get latest security fixes.'
+        - '2:Make sure the tzdata is installed.'
+    - version: 1.0.2
+      date: 2019-04-24
+      changes:
+        - 'Now using baseimage v3.5.2, which brings the following changes:'
+        - '2:Updated installed packages to get latest security fixes.'
+        - '2:Fixed issue where the container could have a zombie process.'
+        - '2:Fixed issue where the password would not be submitted when pressing the enter key in the password modal.'
+        - '2:Use relative path for favicon ressources to be more friendly with reverse proxy senarios.'
+    - version: 1.0.1
+      date: 2018-09-18
+      changes:
+        - 'Now using baseimage v3.5.1, which brings the following changes:'
+        - '2:Updated installed packages to get latest security fixes.'
+    - version: 1.0.0
+      date: 2018-07-12
+      changes:
+        - 'Initial release.'
+
+container:
+  rough_download_size: 100MB
+  storage_permissions: ro
+
+  # Environment variables.
+  environment_variables: []
+
+  # Volumes
+  volumes: []
+
+  # Network ports
+  ports: []
+
+  # Devices
+  devices: []
