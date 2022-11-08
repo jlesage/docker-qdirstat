@@ -72,6 +72,6 @@ VOLUME ["/storage"]
 LABEL \
       org.label-schema.name="qdirstat" \
       org.label-schema.description="Docker container for QDirStat" \
-      org.label-schema.version="${DOCKER_IMAGE_VERSION:-}" \
+      org.label-schema.version="${DOCKER_IMAGE_VERSION:-unknown}" \
       org.label-schema.vcs-url="https://github.com/jlesage/docker-qdirstat" \
       org.label-schema.schema-version="1.0"
