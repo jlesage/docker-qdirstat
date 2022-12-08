@@ -33,6 +33,11 @@ app:
           -v $HOME:/storage:rw
           ```
   changelog:
+    - version: 22.12.1
+      date: 2022-12-08
+      changes:
+        - 'Fixed QDirStat not starting on ARM devices due to missing library.'
+        - 'Updated baseimage to version `4.2.1`, which brings multiple internal enhancements.'
     - version: 22.10.1
       date: 2022-10-24
       changes:
