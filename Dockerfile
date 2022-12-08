@@ -38,6 +38,7 @@ WORKDIR /tmp
 RUN add-pkg \
         qt5-qtbase-x11 \
         adwaita-qt \
+        mesa-gl \
         mesa-dri-swrast \
         # A font is needed.
         font-croscore \
