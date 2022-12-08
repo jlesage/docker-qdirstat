@@ -19,7 +19,7 @@ function log {
 QDIRSTAT_URL="$1"
 
 if [ -z "$QDIRSTAT_URL" ]; then
-    log "ERROR: QdirStat URL missing."
+    log "ERROR: QDirStat URL missing."
     exit 1
 fi
 
@@ -49,7 +49,7 @@ mkdir /tmp/qdirstat
 curl -# -L ${QDIRSTAT_URL} | tar xz --strip 1 -C /tmp/qdirstat
 
 #
-# Compile QDirStat GUI
+# Compile QDirStat.
 #
 
 log "Patching QDirStat..."
