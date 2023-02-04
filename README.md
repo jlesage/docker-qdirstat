@@ -8,7 +8,7 @@ installation or configuration needed on the client side) or via any VNC client.
 
 ---
 
-[![QDirStat logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/qdirstat-icon.png&w=200)](https://github.com/shundhammer/qdirstat)[![QDirStat](https://images.placeholders.dev/?width=256&height=110&fontFamily=Georgia,sans-serif&fontWeight=400&fontSize=52&text=QDirStat&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://github.com/shundhammer/qdirstat)
+[![QDirStat logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/qdirstat-icon.png&w=110)](https://github.com/shundhammer/qdirstat)[![QDirStat](https://images.placeholders.dev/?width=256&height=110&fontFamily=Georgia,sans-serif&fontWeight=400&fontSize=52&text=QDirStat&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://github.com/shundhammer/qdirstat)
 
 QDirStat is a graphical application to show where your disk space has gone and
 to help you to clean it up.
