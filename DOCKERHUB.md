@@ -26,13 +26,13 @@ docker run -d \
     --name=qdirstat \
     -p 5800:5800 \
     -v /docker/appdata/qdirstat:/config:rw \
-    -v $HOME:/storage:ro \
+    -v /home/user:/storage:ro \
     jlesage/qdirstat
 ```
 
 Where:
   - `/docker/appdata/qdirstat`: This is where the application stores its configuration, states, log and any files needing persistency.
-  - `$HOME`: This location contains files from your host that need to be accessible to the application.
+  - `/home/user`: This location contains files from your host that need to be accessible to the application.
 
 Browse to `http://your-host-ip:5800` to access the QDirStat GUI.
 Files from the host appear under the `/storage` folder in the container.

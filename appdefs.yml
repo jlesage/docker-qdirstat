@@ -30,7 +30,7 @@ app:
 
           For example, the `docker run` command would include the following parameter:
           ```
-          -v $HOME:/storage:rw
+          -v /home/user:/storage:rw
           ```
   changelog:
     - version: 23.02.1
