@@ -46,7 +46,7 @@ xx-apk --no-cache --no-scripts add \
 
 log "Downloading QDirStat package..."
 mkdir /tmp/qdirstat
-curl -# -L ${QDIRSTAT_URL} | tar xz --strip 1 -C /tmp/qdirstat
+curl -# -L -f ${QDIRSTAT_URL} | tar xz --strip 1 -C /tmp/qdirstat
 
 #
 # Compile QDirStat.
