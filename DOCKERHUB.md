@@ -1,5 +1,11 @@
 # Docker container for QDirStat
-[![Docker Image Size](https://img.shields.io/docker/image-size/jlesage/qdirstat/latest)](https://hub.docker.com/r/jlesage/qdirstat/tags) [![Build Status](https://github.com/jlesage/docker-qdirstat/actions/workflows/build-image.yml/badge.svg?branch=master)](https://github.com/jlesage/docker-qdirstat/actions/workflows/build-image.yml) [![GitHub Release](https://img.shields.io/github/release/jlesage/docker-qdirstat.svg)](https://github.com/jlesage/docker-qdirstat/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JocelynLeSage)
+[![Release](https://img.shields.io/github/release/jlesage/docker-qdirstat.svg?logo=github&style=for-the-badge)](https://github.com/jlesage/docker-qdirstat/releases/latest)
+[![Docker Image Size](https://img.shields.io/docker/image-size/jlesage/qdirstat/latest?logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/qdirstat/tags)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jlesage/qdirstat?label=Pulls&logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/qdirstat)
+[![Docker Stars](https://img.shields.io/docker/stars/jlesage/qdirstat?label=Stars&logo=docker&style=for-the-badge)](https://hub.docker.com/r/jlesage/qdirstat)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/jlesage/docker-qdirstat/build-image.yml?logo=github&branch=master&style=for-the-badge)](https://github.com/jlesage/docker-qdirstat/actions/workflows/build-image.yml)
+[![Source](https://img.shields.io/badge/Source-GitHub-blue?logo=github&style=for-the-badge)](https://github.com/jlesage/docker-qdirstat)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge)](https://paypal.me/JocelynLeSage)
 
 This is a Docker container for [QDirStat](https://github.com/shundhammer/qdirstat).
 
