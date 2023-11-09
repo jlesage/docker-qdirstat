@@ -12,6 +12,7 @@ app:
   name: qdirstat
   friendly_name: QDirStat
   gui_type: x11
+  base_os: alpine
   project:
     description: |-
       QDirStat is a graphical application to show where your disk space has gone and
