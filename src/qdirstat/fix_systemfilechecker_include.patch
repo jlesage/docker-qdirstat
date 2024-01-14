@@ -1,0 +1,16 @@
+This fixes the following compilation error, caused by missing include for `uid_t`.
+```
+SystemFileChecker.cpp:43:25: error: out-of-line definition of 'isSystemUid' does not match any declaration in 'QDirStat::SystemFileChecker'
+bool SystemFileChecker::isSystemUid( uid_t uid )
+                        ^~~~~~~~~~~
+```
+--- a/src/SystemFileChecker.h	2024-01-14 09:58:46.757911588 -0500
++++ b/src/SystemFileChecker.h	2024-01-14 09:59:01.625941559 -0500
+@@ -10,6 +10,7 @@
+ #ifndef SystemFileChecker_h
+ #define SystemFileChecker_h
+ 
++#include <sys/types.h> // uid_t
+ 
+ #include <QString>
+ 
