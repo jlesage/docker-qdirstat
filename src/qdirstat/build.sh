@@ -58,6 +58,7 @@ patch -d /tmp/qdirstat -p1 < /build/use_default_shell.patch
 patch -d /tmp/qdirstat -p1 < /build/disable_trash.patch
 patch -d /tmp/qdirstat -p1 < /build/disable_file_manager.patch
 patch -d /tmp/qdirstat -p1 < /build/fix_allperms.patch
+patch -d /tmp/qdirstat -p1 < /build/fix_systemfilechecker_include.patch
 
 log "Configuring QDirStat..."
 sed -i 's/$${CROSS_COMPILE}clang/xx-clang/g' /usr/lib/qt5/mkspecs/common/clang.conf
