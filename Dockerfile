@@ -26,7 +26,7 @@ RUN /build/build.sh "$QDIRSTAT_URL"
 RUN xx-verify /tmp/qdirstat-install/usr/bin/qdirstat
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.16-v4.5.3
+FROM jlesage/baseimage-gui:alpine-3.16-v4.6.3
 
 ARG QDIRSTAT_VERSION
 ARG DOCKER_IMAGE_VERSION
@@ -38,17 +38,12 @@ WORKDIR /tmp
 RUN add-pkg \
         qt5-qtbase-x11 \
         adwaita-qt \
-        mesa-gl \
-        mesa-dri-gallium \
         # A font is needed.
         font-croscore \
         # Tools used by the app
         git \
         make \
-        xterm \
-        && \
-    # Save some space by removing unused DRI drivers.
-    find /usr/lib/xorg/modules/dri/ -type f ! -name swrast_dri.so -exec echo "Removing {}..." ';' -delete
+        xterm
 
 # Generate and install favicons.
 RUN \
