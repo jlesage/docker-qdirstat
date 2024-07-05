@@ -34,6 +34,10 @@ app:
           -v /home/user:/storage:rw
           ```
   changelog:
+    - version: 24.07.2
+      date: 2024-07-05
+      changes:
+        - 'Fixed issue where QDirStat would not start under some architectures.'
     - version: 24.07.1
       date: 2024-07-03
       changes:
