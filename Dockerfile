@@ -38,6 +38,7 @@ WORKDIR /tmp
 RUN add-pkg \
         qt5-qtbase-x11 \
         adwaita-qt \
+        mesa-gl \
         # A font is needed.
         font-croscore \
         # Tools used by the app
