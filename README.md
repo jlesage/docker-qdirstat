@@ -590,7 +590,7 @@ server {
 		# differs from the one seen by external clients.
 		#port_in_redirect off;
 		location /qdirstat/websockify {
-			proxy_pass http://docker-qdirstat/websockify/;
+			proxy_pass http://docker-qdirstat/websockify;
 			proxy_http_version 1.1;
 			proxy_set_header Upgrade $http_upgrade;
 			proxy_set_header Connection $connection_upgrade;
