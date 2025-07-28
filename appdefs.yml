@@ -34,6 +34,10 @@ app:
           -v /home/user:/storage:rw
           ```
   changelog:
+    - version: 25.07.2
+      date: 2025-07-28
+      changes:
+        - 'Updated baseimage to version 4.9.0.'
     - version: 25.07.1
       date: 2025-07-05
       changes:
