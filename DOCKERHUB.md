@@ -12,6 +12,8 @@ This is a Docker container for [QDirStat](https://github.com/shundhammer/qdirsta
 The graphical user interface (GUI) of the application can be accessed through a
 modern web browser, requiring no installation or configuration on the client
 
+> This Docker container is entirely unofficial and not made by the creators of QDirStat.
+
 ---
 
 [![QDirStat logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/qdirstat-icon.png&w=110)](https://github.com/shundhammer/qdirstat)[![QDirStat](https://images.placeholders.dev/?width=256&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=QDirStat&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://github.com/shundhammer/qdirstat)
