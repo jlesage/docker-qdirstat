@@ -43,6 +43,7 @@ RUN add-pkg \
         # A font is needed.
         font-croscore \
         # Tools used by the app
+        file \
         git \
         make \
         xterm
