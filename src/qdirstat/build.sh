@@ -12,7 +12,7 @@ export LDFLAGS="-Wl,--strip-all -Wl,--as-needed"
 export CC=xx-clang
 export CXX=xx-clang++
 
-function log {
+log() {
     echo ">>> $*"
 }
 
@@ -31,14 +31,15 @@ apk --no-cache add \
     clang \
     make \
     patch \
-    qtchooser \
-    qt5-qtbase-dev \
+    qt6-qtbase-dev \
+    qt6-qt5compat-dev \
 
 xx-apk --no-cache --no-scripts add \
     musl-dev \
     gcc \
     g++ \
-    qt5-qtbase-dev \
+    qt6-qtbase-dev \
+    qt6-qt5compat-dev \
 
 #
 # Download sources.
@@ -58,18 +59,23 @@ patch -d /tmp/qdirstat -p1 < /build/use_default_shell.patch
 patch -d /tmp/qdirstat -p1 < /build/disable_trash.patch
 patch -d /tmp/qdirstat -p1 < /build/disable_file_manager.patch
 patch -d /tmp/qdirstat -p1 < /build/fix_allperms.patch
-patch -d /tmp/qdirstat -p1 < /build/fix_systemfilechecker_include.patch
+patch -d /tmp/qdirstat -p1 < /build/fix_missing_intl_lib.patch
 
 log "Configuring QDirStat..."
-sed -i 's/$${CROSS_COMPILE}clang/xx-clang/g' /usr/lib/qt5/mkspecs/common/clang.conf
+sed -i 's/$${CROSS_COMPILE}clang/xx-clang/g' /usr/lib/qt6/mkspecs/common/clang.conf
 (
     cd /tmp/qdirstat && \
-    qmake -spec linux-clang && \
+    /usr/lib/qt6/bin/qmake -spec linux-clang && \
     cd /tmp/qdirstat/src && \
-    qmake src.pro -spec linux-clang
+    /usr/lib/qt6/bin/qmake src.pro -spec linux-clang
 )
-sed -i "s| /usr/lib/libQt5| $(xx-info sysroot)usr/lib/libQt5|g" /tmp/qdirstat/src/Makefile
-sed -i "s|LFLAGS        = .*|LFLAGS        = $LDFLAGS|" /tmp/qdirstat/src/Makefile
+if xx-info is-cross; then
+    sed -i "s|/usr/lib/lib|$(xx-info sysroot)usr/lib/lib|g" /tmp/qdirstat/src/Makefile
+    sed -i "s|/usr/lib/qt6/mkspecs/|$(xx-info sysroot)usr/lib/qt6/mkspecs/|g" /tmp/qdirstat/src/Makefile
+    sed -i "s|/usr/include/|$(xx-info sysroot)usr/include/|g" /tmp/qdirstat/src/Makefile
+    sed -i "s|-I/usr/|-I$(xx-info sysroot)usr/|g" /tmp/qdirstat/src/Makefile
+    sed -i "s|LFLAGS        = .*|LFLAGS        = $LDFLAGS -L$(xx-info sysroot)usr/lib|" /tmp/qdirstat/src/Makefile
+fi
 
 log "Compiling QDirStat..."
 make -C /tmp/qdirstat -j$(nproc)

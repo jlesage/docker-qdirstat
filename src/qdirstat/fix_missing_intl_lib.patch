@@ -1,0 +1,11 @@
+--- a/src/src.pro	2026-01-18 14:33:23.443131702 -0500
++++ b/src/src.pro	2026-01-18 14:33:36.972616005 -0500
+@@ -29,7 +29,7 @@
+ DEPENDPATH	+= .
+ MOC_DIR		 = .moc
+ OBJECTS_DIR	 = .obj
+-LIBS		+= -lz
++LIBS		+= -lz -lintl
+ 
+ major_is_less_5 = $$find(QT_MAJOR_VERSION, [234])
+ !isEmpty(major_is_less_5):DEFINES += 'Q_DECL_OVERRIDE=""'

@@ -8,7 +8,7 @@
 ARG DOCKER_IMAGE_VERSION=
 
 # Define software versions.
-ARG QDIRSTAT_VERSION=1.9
+ARG QDIRSTAT_VERSION=2.0
 
 # Define software download URLs.
 ARG QDIRSTAT_URL=https://github.com/shundhammer/qdirstat/archive/${QDIRSTAT_VERSION}.tar.gz
@@ -17,7 +17,7 @@ ARG QDIRSTAT_URL=https://github.com/shundhammer/qdirstat/archive/${QDIRSTAT_VERS
 FROM --platform=$BUILDPLATFORM tonistiigi/xx AS xx
 
 # Build QDirStat.
-FROM --platform=$BUILDPLATFORM alpine:3.16 AS qdirstat
+FROM --platform=$BUILDPLATFORM alpine:3.20 AS qdirstat
 ARG TARGETPLATFORM
 ARG QDIRSTAT_URL
 COPY --from=xx / /
@@ -26,7 +26,7 @@ RUN /build/build.sh "$QDIRSTAT_URL"
 RUN xx-verify /tmp/qdirstat-install/usr/bin/qdirstat
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.16-v4.10.6
+FROM jlesage/baseimage-gui:alpine-3.20-v4.10.6
 
 ARG QDIRSTAT_VERSION
 ARG DOCKER_IMAGE_VERSION
@@ -36,7 +36,8 @@ WORKDIR /tmp
 
 # Install dependencies.
 RUN add-pkg \
-        qt5-qtbase-x11 \
+        qt6-qtbase-x11 \
+        qt6-qt5compat \
         adwaita-qt \
         mesa-gl \
         # A font is needed.
