@@ -34,6 +34,10 @@ app:
           -v /home/user:/storage:rw
           ```
   changelog:
+    - version: 26.01.2
+      date: 2026-01-23
+      changes:
+        - 'Updated QDirStat to version 2.0.'
     - version: 26.01.1
       date: 2026-01-04
       changes:
