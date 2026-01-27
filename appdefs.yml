@@ -188,7 +188,7 @@ app:
     - version: 22.12.2
       date: 2022-12-11
       changes:
-        - 'Implemented workaround for issue seen with Synology devices where container would not start after an image update.  The problem is caused by Synology explicitly setting all environment variables and keeping values from the old version.'
+        - 'Implemented workaround for issue seen with Synology devices where container would not start after an image update. The problem is caused by Synology explicitly setting all environment variables and keeping values from the old version.'
     - version: 22.12.1
       date: 2022-12-08
       changes:
@@ -197,7 +197,7 @@ app:
     - version: 22.10.1
       date: 2022-10-24
       changes:
-        - 'Versioning scheme  of the Docker image changed to `YY.MM.SEQUENCE`.'
+        - 'Versioning scheme of the Docker image changed to `YY.MM.SEQUENCE`.'
         - 'Update of the baseimage to version 4.1.1 brings the following new features:'
         - '2:Multi-arch image support.'
         - '2:Support for dark mode.'
