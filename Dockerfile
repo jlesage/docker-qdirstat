@@ -26,7 +26,7 @@ RUN /build/build.sh "$QDIRSTAT_URL"
 RUN xx-verify /tmp/qdirstat-install/usr/bin/qdirstat
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.20-v4.10.6
+FROM jlesage/baseimage-gui:alpine-3.20-v4.11.0
 
 ARG QDIRSTAT_VERSION
 ARG DOCKER_IMAGE_VERSION
