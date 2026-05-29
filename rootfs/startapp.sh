@@ -11,5 +11,6 @@ export QT_QPA_PLATFORM=xcb
 export QT_XCB_GL_INTEGRATION=none
 
 cd /storage
-exec /usr/bin/qdirstat
+exec /usr/bin/qdirstat "$@"
+
 # vim:ft=sh:ts=4:sw=4:et:sts=4

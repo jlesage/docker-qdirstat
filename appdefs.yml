@@ -287,7 +287,17 @@ container:
   storage_permissions: ro
 
   # Environment variables.
-  environment_variables: []
+  environment_variables:
+    - name: QDIRSTAT_STARTUP_SCAN_FOLDER
+      description: >-
+        Path to the folder inside the container that {{ app.friendly_name }}
+        scans automatically on startup.
+      type: public
+      unraid_template:
+        title: "Startup Scan Folder"
+        display: advanced
+        required: false
+        mask: false
 
   # Volumes
   volumes: []

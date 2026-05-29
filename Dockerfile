@@ -64,6 +64,10 @@ RUN \
     set-cont-env DOCKER_IMAGE_VERSION "$DOCKER_IMAGE_VERSION" && \
     true
 
+# Set public environment variables.
+ENV \
+    QDIRSTAT_STARTUP_SCAN_FOLDER=
+
 # Define mountable directories.
 VOLUME ["/storage"]
 
