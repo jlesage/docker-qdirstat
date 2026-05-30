@@ -34,6 +34,10 @@ app:
           -v /home/user:/storage:rw
           ```
   changelog:
+    - version: 26.05.1
+      date: 2026-05-29
+      changes:
+        - 'Added the ability to automatically scan a folder on startup.'
     - version: 26.03.1
       date: 2026-03-14
       changes:
