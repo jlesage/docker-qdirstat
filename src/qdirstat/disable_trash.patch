@@ -1,11 +1,11 @@
 --- a/src/MainWindow.cpp
 +++ b/src/MainWindow.cpp
-@@ -307,7 +307,11 @@
+@@ -335,7 +335,11 @@
      bool pseudoDirSelected = selectedItems.containsPseudoDir();
      bool pkgSelected	   = selectedItems.containsPkg();
  
 +#ifdef ENABLE_TRASH
-     _ui->actionMoveToTrash->setEnabled( sel && ! pseudoDirSelected && ! pkgSelected && ! reading );
+     _ui->actionMoveToTrash->setEnabled( sel && ! pseudoDirSelected && ! pkgSelected && ! reading && ! app()->restrictedMode() );
 +#else
 +    _ui->actionMoveToTrash->setEnabled( false );
 +#endif

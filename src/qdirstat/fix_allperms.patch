@@ -1,6 +1,6 @@
---- a/src/FileInfo.cpp	2019-07-22 08:46:55.000000000 -0400
-+++ b/src/FileInfo.cpp	2020-01-24 21:03:47.505790088 -0500
-@@ -31,6 +31,11 @@
+--- a/src/FileInfo.cpp
++++ b/src/FileInfo.cpp
+@@ -32,6 +32,11 @@
  
  #define FRAGMENT_SIZE	2048
  
@@ -12,11 +12,11 @@
  using namespace QDirStat;
  
  
---- a/src/FormatUtil.cpp	2019-07-22 08:46:55.000000000 -0400
-+++ b/src/FormatUtil.cpp	2020-01-24 21:03:47.505790088 -0500
-@@ -31,6 +31,11 @@
- 
- #include "FormatUtil.h"
+--- a/src/FormatUtil.cpp
++++ b/src/FormatUtil.cpp
+@@ -15,6 +15,11 @@
+ #include "Settings.h"
+ #include "SettingsHelpers.h"
  
 +/* for musl */
 +#ifndef ALLPERMS
